@@ -45,7 +45,7 @@ let inputText = ref('');
     .placeholder {
         position: absolute;
         margin-left: 7px;
-        margin-top: 3px;
+        margin-top: 10px;
         opacity: 0.5;
         transition: 0.3s;
         font-size: 1.2em;
@@ -55,8 +55,7 @@ let inputText = ref('');
     .placeholder.has-value {
         margin-top: -30px;
         opacity: 1;
-        font-size: 18px;
-        font-size: 1.1em;
+        font-size: 1.15em;
     }
 
     .input {
