@@ -22,7 +22,7 @@ defineProps({
         line-height: 50px;
         background-color: #4A90E2;
         color: white;
-        font-family: Arial, sans-serif;
+        font-family: Comfortaa;
         font-size: 16px;
         align-items: center;
         justify-content: center;
