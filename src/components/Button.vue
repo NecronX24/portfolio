@@ -2,10 +2,15 @@
 defineProps({
     text:{
         type:String,
-        require:true
+        required:true
     },
     event:{
         type:Function
+    },
+    colors:{
+        type:Object,
+        default: () =>({backgroundColor: "#4A90E2", textColor:"#ffffff", activeColor:"#357ABD"}),
+        validator(value){ return ( value && 'backgroundColor' in value && 'textColor' in value && 'activeColor' in value) }
     }
 })
 </script>
@@ -20,8 +25,8 @@ defineProps({
         height: 50px;
         padding: 15px;
         line-height: 50px;
-        background-color: #4A90E2;
-        color: white;
+        background-color: v-bind('colors.backgroundColor');
+        color: v-bind('colors.textColor');
         font-family: Comfortaa;
         font-size: 16px;
         align-items: center;
@@ -35,13 +40,12 @@ defineProps({
     .button:active {
         transform: scale(0.98);
         box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-        background-color: #357ABD;
+        background-color: v-bind('colors.activeColor');
     }
 
     .button:enabled:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-        color: white;
+        box-shadow: 3px 2px 22px 1px rgba(141, 141, 141, 0.24);
         cursor: pointer;
     }
 
