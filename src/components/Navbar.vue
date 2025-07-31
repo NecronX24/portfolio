@@ -1,11 +1,16 @@
 <script setup>
 import Button from './Button.vue';
+import { ref } from 'vue';
 defineProps({
     elements:{
         type:Array,
-        require:true
+        required:true
     }
 })
+const selected = ref(0);
+const selectItem = (index) =>{
+    selected.value = index;
+}
 </script>
 
 <template>
@@ -14,7 +19,13 @@ defineProps({
             Angel C
         </h1>
         <div class="element-container">
-            <h1 class="element" v-for="element in elements" @click="element[1]">{{ element[0] }}</h1>
+            <h1 class="element"
+                v-for="(element, index) in elements"
+                :key="index"
+                @click="()=>{element[1]; selectItem(index)}"
+                :class="{'selected': selected ===index}"
+            >
+                {{ element[0] }}</h1>
         </div>
         <Button text="Contáctame" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
     </div>
@@ -32,11 +43,12 @@ defineProps({
     background-color: #282828;
     margin:0;
     width: 100vw;
+    align-items: center;
 }
 
 .home-button{
     cursor:pointer;
-    margin:25px;
+    margin-left: 25px;
     font-weight: 900;
     font-family: 'PlayfairDisplay';
     color: #37ac62;
@@ -47,19 +59,48 @@ defineProps({
     color:white;
 }
 
+.element-container{
+    display: flex;
+    flex-direction: row;
+}
+
 .element{
     cursor:pointer;
     transition: 0.3s;
-    margin-top: 25px;
     color:white;
+    position: relative;
+    padding-bottom: 5px;
+    margin:9px;
 }
 .element:hover{
     color:#37ac62;
 }
 
 .button{
-    margin:12px;
     margin-right: 20px;
-    margin-top: 17px;
+}
+
+.element.selected{
+    color:#37ac62;
+}
+
+.element.selected::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #37ac62;
+    animation: underline 0.3s ease;
+}
+
+@keyframes underline {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 </style>
