@@ -42,7 +42,8 @@ const selectItem = (index) =>{
     justify-content: space-between;
     background-color: #282828;
     margin:0;
-    width: 100vw;
+    width: 100%;
+    height: 10vh;
     align-items: center;
 }
 
