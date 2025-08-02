@@ -2,6 +2,7 @@
 import Button from '@/components/Button.vue';
 import Navbar from '@/components/Navbar.vue';
 import Slider from '@/components/Slider.vue';
+import CardSlider from '@/components/CardSlider.vue';
 
 let elements =[
     ["Home", ()=>{alert('Hola')}],
@@ -31,29 +32,46 @@ let elements =[
     
     <div class="projects division-div">
         <h1 class="about-me-h1"> Projects</h1>
-        <Slider :total-slides="2">
+        <Slider :total-slides="3">
             <template #slide-0 >
-                <div style="display: flex; flex-direction: row; width: 100%;">
-                    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;padding: 5%;">
-                        <h1 style="margin-bottom: 0; height: 10%;">React <img src="../assets/react.png" style="max-width: 20%; max-height: 100%;"/></h1>
-                        <p>A project for creating and managing notes, which includes the implementation of a personal server to securely and personally handle user sessions.</p>
-                        <a href="https://note-project-react.vercel.app/" target="_blank"><img src="../assets/vercel.svg" title="Vercel" style="width: 200%;"/></a>
-                    </div>
-                    <Slider :total-slides="3" style="margin-right: 4%; margin-top: 14%">
-                        <template #slide-0>
-                            <img src="../assets/react/1.png" style="width: 100%; height:auto; max-width: 100%;"/>
-                        </template>
-                        <template #slide-1>
-                            <img src="../assets/react/2.png" style="width: 100%; height:auto; max-width: 100%;"/>
-                        </template>
-                        <template #slide-2>
-                            <img src="../assets/react/3.png" style="width: 100%; height:auto; max-width: 100%;"/>
-                        </template>
-                    </Slider>
-                </div>
+                <CardSlider
+                name="React"
+                image="/public/react.png"
+                content="A project for creating and managing notes, which includes the implementation of a personal server to securely and personally handle user sessions."
+                github="https://github.com/NecronX24/note-project-react"
+                vercel="https://note-project-react.vercel.app/"
+                :slides="{
+                    0:`public/react/1.png`,
+                    1:`public/react/2.png`,
+                    2:`public/react/3.png`
+                }"
+                ></CardSlider>
             </template>
             <template #slide-1>
-                <h1>Prueba2</h1>
+                <CardSlider
+                name="Angular"
+                image="/public/angular.png"
+                content="A project with ten clocks built as Angular components, including a personal server for secure session handling."
+                github="https://github.com/NecronX24/clocks-angular"
+                vercel="https://clocks-angular.vercel.app/clocks"
+                :slides="{
+                    0:`public/angular/1.png`,
+                    1:`public/angular/2.png`,
+                    2:`public/angular/3.png`
+                }"
+                ></CardSlider>
+            </template>
+            <template #slide-2>
+                <CardSlider
+                name="Vue"
+                image="/public/vue.png"
+                content="A portfolio built with Vue, showcasing component-based design and modern UI practices."
+                github="https://github.com/NecronX24/portfolio"
+                vercel="https://necronx24-portfolio.vercel.app/"
+                :slides="{
+
+                }"
+                />
             </template>
         </Slider>
     </div>
