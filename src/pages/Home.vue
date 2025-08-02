@@ -6,7 +6,8 @@ import CardSlider from '@/components/CardSlider.vue';
 
 let elements =[
     ["Home", ()=>{alert('Hola')}],
-    ["About", ()=>{alert('Hola')}]
+    ["About", ()=>{alert('Hola')}],
+    ["Projects", ()=>{alert('Hola')}]
 ]
 </script>
 
