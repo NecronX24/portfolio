@@ -27,7 +27,7 @@ const selectItem = (index) =>{
             >
                 {{ element[0] }}</h1>
         </div>
-        <Button text="Contáctame" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
+        <Button text="Contact me" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
     </div>
 </template>
 
