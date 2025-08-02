@@ -33,8 +33,8 @@ defineProps({
             <h1 style="margin-bottom: 0; height: 10%;">{{ name }} <img :src="image" style="max-width: 20%; max-height: 100%;"/></h1>
             <p>{{ content }}</p>
             <div style="display: flex; flex-direction: row; gap:50px; height:50px;">
-                <a :href="github" target="_blank" style="width : 40%; height: 40%;"><img src="/public/github.png" title="Github" style="width : 40px; height: 40px;"/></a>
-                <a :href="vercel" v-if="vercel!==null" target="_blank" style="width : 40%; height: 40%;"><img src="/public/vercel.svg" title="Vercel" style="width : 40px; height: 40px;"/></a>
+                <a :href="github" target="_blank" style="width : 40%; height: 40%;"><img src="/github.png" title="Github" style="width : 40px; height: 40px;"/></a>
+                <a :href="vercel" v-if="vercel!==null" target="_blank" style="width : 40%; height: 40%;"><img src="/vercel.svg" title="Vercel" style="width : 40px; height: 40px;"/></a>
             </div>
         </div>
         <Slider :total-slides="Object.keys(slides).length" style="margin-right: 4%; margin-top: 14%">
