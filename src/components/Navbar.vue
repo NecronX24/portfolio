@@ -45,6 +45,8 @@ const selectItem = (index) =>{
     width: 100%;
     height: 10vh;
     align-items: center;
+    position: fixed;
+    z-index: 10;
 }
 
 .home-button{
