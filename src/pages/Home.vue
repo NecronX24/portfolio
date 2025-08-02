@@ -32,7 +32,7 @@ let elements =[
     
     <div class="projects division-div">
         <h1 class="about-me-h1"> Projects</h1>
-        <Slider :total-slides="3">
+        <Slider :total-slides="4">
             <template #slide-0 >
                 <CardSlider
                 name="React"
@@ -69,9 +69,19 @@ let elements =[
                 github="https://github.com/NecronX24/portfolio"
                 vercel="https://necronx24-portfolio.vercel.app/"
                 :slides="{
-
+                    0:`/public/vue/1.png`
                 }"
                 />
+            </template>
+            <template #slide-3>
+                <h1>Other projects</h1>
+                <div style="display: flex; flex-direction:row; gap:2%; align-items: center; justify-content: center;">
+                    <p >A backend project made in</p> <img src="/public/node.png" style="width: 10%;"/>
+                </div>
+                <div style="display: flex; flex-direction:row; gap:2%; align-items: center; justify-content: center;">
+                    <p >Basic projects made in</p> <img src="/public/c++.png" style="width: 5%;"/>
+                    <p> and </p> <img src="/public/java.png" style="width: 5%;"/>
+                </div>
             </template>
         </Slider>
     </div>
