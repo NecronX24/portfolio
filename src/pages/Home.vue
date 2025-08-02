@@ -5,15 +5,15 @@ import Slider from '@/components/Slider.vue';
 import CardSlider from '@/components/CardSlider.vue';
 
 let elements =[
-    ["Home", ()=>{alert('Hola')}],
-    ["About", ()=>{alert('Hola')}],
-    ["Projects", ()=>{alert('Hola')}]
+    ["Home", "home"],
+    ["About", "about"],
+    ["Projects", "projects"]
 ]
 </script>
 
 <template>
     <Navbar :elements="elements"></Navbar>
-    <div class="home">
+    <div class="home" id="home">
         <div class="home-text">
             <h1 class="home-h1">Hello!, I'm Angel Cueche</h1>
             <h2 class="home-h2">Junior Developer</h2>
@@ -23,7 +23,7 @@ let elements =[
             <p class="home-p"> A passionate person who is looking for real experience in the programming world!</p>
         </div>
     </div>
-    <div class="division-div">
+    <div class="division-div" id="about">
         <h1 class="about-me-h1">Who am I?</h1>
         <div class="about-me-text">
             <h2 class="about-me-h2">Lifelong learner</h2>
@@ -31,7 +31,7 @@ let elements =[
         </div>
     </div>
     
-    <div class="projects division-div">
+    <div class="projects division-div" id="projects">
         <h1 class="about-me-h1"> Projects</h1>
         <Slider :total-slides="4">
             <template #slide-0 >
@@ -91,12 +91,13 @@ let elements =[
 
 <style scoped>
 .home{
-    background: linear-gradient(270deg, #08b51f82, #055610db);
+    /* background: linear-gradient(270deg, #08b51f82, #055610db); */
     min-height: 100vh;
 }
 
 .division-div{
     height: 90vh;
+    scroll-margin-top: 10vh;
 }
 
 .home-text{

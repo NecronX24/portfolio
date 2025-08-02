@@ -11,18 +11,26 @@ const selected = ref(0);
 const selectItem = (index) =>{
     selected.value = index;
 }
+const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 </script>
 
 <template>
     <div class="container">
-        <h1 class="home-button">
+        <h1 class="home-button"
+            @click="()=>{scrollToSection('home')}"
+        >
             Angel C
         </h1>
         <div class="element-container">
             <h1 class="element"
                 v-for="(element, index) in elements"
                 :key="index"
-                @click="()=>{element[1]; selectItem(index)}"
+                @click="()=>{scrollToSection(element[1]); selectItem(index)}"
                 :class="{'selected': selected ===index}"
             >
                 {{ element[0] }}</h1>
@@ -34,7 +42,7 @@ const selectItem = (index) =>{
 <style scoped>
 @font-face{
   font-family: 'PlayfairDisplay';
-  src: url('./assets/PlayfairDisplay.ttf') format('truetype');
+  src: url('../assets/PlayfairDisplay.ttf') format('truetype');
 }
 .container{
     display:flex;
