@@ -50,7 +50,7 @@ defineExpose({
 <style scoped>
 @font-face{
   font-family: 'PlayfairDisplay';
-  src: url('../assets/PlayfairDisplay.ttf') format('truetype');
+  src: url('/PlayfairDisplay.ttf') format('truetype');
 }
 .container{
     display:flex;
