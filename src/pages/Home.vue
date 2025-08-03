@@ -6,7 +6,7 @@ import CardSlider from '@/components/CardSlider.vue';
 
 let elements =[
     ["Home", "home"],
-    ["About", "about"],
+    ["Skills", "skills"],
     ["Projects", "projects"]
 ]
 </script>
@@ -22,8 +22,11 @@ let elements =[
             </p>
             <p class="home-p"> A passionate person who is looking for real experience in the programming world!</p>
         </div>
+        <div class="image">
+            <img src="/me.png" style="height: 100%; width: 100%;"/>
+        </div>
     </div>
-    <div class="division-div" id="about">
+    <div class="division-div" id="skills">
         <h1 class="about-me-h1">Who am I?</h1>
         <div class="about-me-text">
             <h2 class="about-me-h2">Lifelong learner</h2>
@@ -90,9 +93,20 @@ let elements =[
 </template>
 
 <style scoped>
-.home{
-    /* background: linear-gradient(270deg, #08b51f82, #055610db); */
-    min-height: 100vh;
+#home{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap:20%
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 70%;
+    width: 28%;
+    padding-top: 20vh;
 }
 
 .division-div{
@@ -101,8 +115,8 @@ let elements =[
 }
 
 .home-text{
-    padding-top:8%;
-    padding-left:7%;
+    padding-top:30vh;
+    padding-left:10vw;
     width: 30%;
     color:white;
 }
