@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar.vue';
 import Slider from '@/components/Slider.vue';
 import CardSlider from '@/components/CardSlider.vue';
 import { onMounted, onBeforeUnmount, ref } from 'vue';
+import RadarChart from '@/components/RadarChart.vue';
 
 let elements =[
     ["Home", "home"],
@@ -54,11 +55,39 @@ onBeforeUnmount(() => {
             <p class="home-p"> A passionate person who is looking for real experience in the programming world!</p>
         </div>
         <div class="image">
-            <img src="/me.png" style="height: 100%; width: 100%;"/>
+            <img src="/me.png" style="height: 100%; width: 100%; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); border-radius: 50%;"/>
         </div>
     </div>
     <div class="division-div" id="skills">
-        
+        <h1>Skills</h1>
+        <div style="display: flex; gap:5%">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1>Active Skills</h1>
+                <div class="chart">
+                    <RadarChart :data="[
+                        { name: 'HTML', value: 65 },
+                        { name: 'CSS', value: 50 },
+                        { name: 'JS', value: 75 },
+                        { name: 'Vue', value: 50 },
+                        { name: 'Angular', value: 50 },
+                        { name: 'React', value: 50 },
+                        { name: 'Design', value: 50 },
+                    ]"/>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h1>Pasive Skills</h1>
+                <div class="chart">
+                    <RadarChart :data="[
+                        { name: 'Critical Thinking', value: 90 },
+                        { name: 'Flexibility', value: 100 },
+                        { name: 'Communication', value: 90 },
+                        { name: 'Grow Mindset', value: 89 },
+                        { name: 'Leadership', value: 80 },
+                    ]"/>
+                </div>
+            </div>
+        </div>
         <!-- <h1 class="about-me-h1">Who am I?</h1>
         <div class="about-me-text">
             <h2 class="about-me-h2">Lifelong learner</h2>
@@ -130,6 +159,19 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: row;
     gap:20%
+}
+
+#skills{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 100vw;
+}
+
+.chart{
+    height: auto;
+    width: 35vw;
 }
 
 .image{
