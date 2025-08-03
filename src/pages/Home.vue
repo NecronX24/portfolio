@@ -5,11 +5,14 @@ import Slider from '@/components/Slider.vue';
 import CardSlider from '@/components/CardSlider.vue';
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 import RadarChart from '@/components/RadarChart.vue';
+import Accordion from '@/components/Accordion.vue';
+import AccordionItem from '@/components/AccordionItem.vue';
 
 let elements =[
     ["Home", "home"],
     ["Skills", "skills"],
-    ["Projects", "projects"]
+    ["Projects", "projects"],
+    ["About", "about"]
 ]
 
 const navbarRef = ref(null);
@@ -88,11 +91,6 @@ onBeforeUnmount(() => {
                 </div>
             </div>
         </div>
-        <!-- <h1 class="about-me-h1">Who am I?</h1>
-        <div class="about-me-text">
-            <h2 class="about-me-h2">Lifelong learner</h2>
-            <p class="about-me-p">An enthusiastic person looking for ways to apply the knowledge gathered during college.</p>
-        </div> -->
     </div>
     
     <div class="projects division-div" id="projects">
@@ -151,6 +149,63 @@ onBeforeUnmount(() => {
         </Slider>
     </div>
 
+    <div class="division-div" id="about">
+        <h1 class="about-me-h1">Who am I?</h1>
+        <Accordion>
+            <AccordionItem id="experience" title="Experience">
+                <div style="display: flex; flex-direction: row; justify-content: center; gap: 3%;">
+                    <img src="/about/1.png" style="border-radius: 10%; width: 30vw; height: auto;"></img>
+                    <div >
+                        <h1 style="margin: 0; width: 30vw;">Store Manager - Barista</h1>
+                        <h2 style = "margin:0">Tres Puntos Cafe</h2>
+                        <p style="margin: 0;">2020 - 2022</p>
+                        <p style="font-weight: bolder; margin:0">Experience</p>
+                        <ul style="margin:3%; width: 30vw;">
+                            <li>Operation of espresso machine and coffee preparation</li>
+                            <li>Staff supervision, shift management, and inventory control</li>
+                            <li>Customer service - Host</li>
+                        </ul>
+                    </div>
+                </div>
+            </AccordionItem>
+            <AccordionItem id="education" title="Education">
+                <div style="display: flex; flex-direction: row; justify-content: center; gap: 3%;">
+                    <img src="/about/2.png" style="border-radius: 10%; width: 20vw; height: auto;"></img>
+                    <div>
+                        <h2 style="margin: 0; width: 50vw;">Bachelor's Degree in Computer Engineering</h2>
+                        <p style = "margin:0">Universidad Rafael Urdaneta</p>
+                        <p style="margin: 0;">2021 - Present</p>
+                        <p style="font-style: italic; margin:0">Honored four times on the Dean’s List and counting...</p>
+                        <h2 style="margin:0; width: 50vw; margin-top: 1%;">Barista Course</h2>
+                        <p style = "margin:0">Tercera Ola, EICV, Raul Martinez SCA Trainer</p>
+                        <p style="margin: 0;">2019, 2022, 2024</p>
+                        <h2 style="margin:0; width: 50vw; margin-top: 1%;">English Course</h2>
+                        <p style = "margin:0">CEVAZ</p>
+                        <p style="margin: 0;">2018 - 2020</p>
+                    </div>
+                </div>
+            </AccordionItem>
+            <AccordionItem id="personal-information" title="Personal Information">
+                <ul>
+                    <li>Mail: angeljavicueche@gmail.com</li>
+                    <li>Phone: +58-412-6244-554</li>
+                    <li>Location: Maracaibo, Venezuela</li>
+                    <li>English Level: B2</li>
+                </ul>
+            </AccordionItem>
+            <AccordionItem id="hobbies" title="Hobbies">
+                <ul>
+                    <li>Programming</li>
+                    <li>Barista skills</li>
+                    <li>Personal growth</li>
+                    <li>Video games</li>
+                    <li>Reading</li>
+                    <li>Gardening</li>
+                </ul>
+            </AccordionItem>
+        </Accordion>
+    </div>
+
 </template>
 
 <style scoped>
@@ -207,7 +262,7 @@ h2 {
   color:white;
 }
 
-p {
+p, ul {
   font-size: 1.2rem;
   line-height: 1.6;
   color:white;
@@ -216,15 +271,9 @@ p {
 .about-me-h1{
     display: flex;
     justify-content: center;
-    padding: 1%;
+    padding: 3%;
 }
 
-.about-me-text{
-    float: right;
-    width: 30%;
-    padding: 3%;
-    padding-right: 7%;
-}
 
 .projects{
     height: 90vh;
