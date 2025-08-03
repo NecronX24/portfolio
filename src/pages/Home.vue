@@ -27,11 +27,12 @@ let elements =[
         </div>
     </div>
     <div class="division-div" id="skills">
-        <h1 class="about-me-h1">Who am I?</h1>
+        
+        <!-- <h1 class="about-me-h1">Who am I?</h1>
         <div class="about-me-text">
             <h2 class="about-me-h2">Lifelong learner</h2>
             <p class="about-me-p">An enthusiastic person looking for ways to apply the knowledge gathered during college.</p>
-        </div>
+        </div> -->
     </div>
     
     <div class="projects division-div" id="projects">
@@ -118,23 +119,25 @@ let elements =[
     padding-top:30vh;
     padding-left:10vw;
     width: 30%;
-    color:white;
 }
 
 h1{
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   opacity: 0.9;
+  color:white;
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.6;
+  color:white;
 }
 
 .about-me-h1{
