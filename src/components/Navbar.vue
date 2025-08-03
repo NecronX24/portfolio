@@ -17,12 +17,20 @@ const scrollToSection = (id) => {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
+defineExpose({
+    selectItem,
+    selected
+})
 </script>
 
 <template>
     <div class="container">
         <h1 class="home-button"
-            @click="()=>{scrollToSection('home')}"
+            @click="()=>{
+                scrollToSection('home'); 
+                selectItem(0)
+            }"
         >
             Angel C
         </h1>

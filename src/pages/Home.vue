@@ -3,16 +3,47 @@ import Button from '@/components/Button.vue';
 import Navbar from '@/components/Navbar.vue';
 import Slider from '@/components/Slider.vue';
 import CardSlider from '@/components/CardSlider.vue';
+import { onMounted, onBeforeUnmount, ref } from 'vue';
 
 let elements =[
     ["Home", "home"],
     ["Skills", "skills"],
     ["Projects", "projects"]
 ]
+
+const navbarRef = ref(null);
+
+let observers = [];
+
+onMounted(() => {
+    elements.forEach(([name, id], index) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const observer = new IntersectionObserver(
+                (entries)  => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (navbarRef.value) {
+                                navbarRef.value.selectItem(index);
+                            }
+                        }
+                    });
+                },
+                { threshold: 0.3 } 
+            );
+            observer.observe(section);
+            observers.push(observer);
+        }
+    });
+});
+
+onBeforeUnmount(() => {
+    observers.forEach((observer) => observer.disconnect());
+})
 </script>
 
 <template>
-    <Navbar :elements="elements"></Navbar>
+    <Navbar :elements="elements" ref="navbarRef"></Navbar>
     <div class="home" id="home">
         <div class="home-text">
             <h1 class="home-h1">Hello!, I'm Angel Cueche</h1>
