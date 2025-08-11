@@ -221,7 +221,6 @@ onBeforeUnmount(() => {
     align-items: center;
     flex-direction: column;
     height: 90vh;
-    width: 100vw;
 }
 
 .chart{
@@ -240,7 +239,6 @@ onBeforeUnmount(() => {
 
 .division-div{
     height: 90vh;
-    scroll-margin-top: 10vh;
 }
 
 .home-text{
