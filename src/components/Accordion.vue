@@ -40,12 +40,21 @@ provide('toggleItem', toggleItem);
 <style scoped>
 .accordion-wrapper {
   border-radius: 8px;
-  overflow: hidden;
-  min-width: 80vw;
+  overflow-y: auto;
+  height: 63vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /*hidde overflow bar*/
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+.accordion-wrapper::-webkit-scrollbar{
+  display: none;
+}
+
 h1{
   font-size: 3rem;
   margin-bottom: 1rem;

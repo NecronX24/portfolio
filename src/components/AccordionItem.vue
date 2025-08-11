@@ -67,7 +67,7 @@ button{
   border: 1px solid var(--surface-border);
   border-radius: 8px;
   margin-bottom: 0.75rem; 
-  overflow: hidden; 
+  overflow-y:visible; 
   background-color: var(--surface-card);
   border-style: solid;
   border-color: gray;
