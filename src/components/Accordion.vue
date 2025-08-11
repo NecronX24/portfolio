@@ -13,17 +13,17 @@ const props = defineProps({
   },
 });
 
-const activeItemId = ref(props.initialOpenId);
+const activeItemId = ref(
+  //Set is a object that stores unique values
+  new Set([props.initialOpenId])
+);
 
 const toggleItem = (id) => {
-  if (activeItemId.value === id) {
-    activeItemId.value = null; 
+  if (activeItemId.value.has(id)) {
+    activeItemId.value.delete(id); 
   } else {
-    if (props.singleOpen) {
-      activeItemId.value = id; 
-    } else {
-      activeItemId.value = id;
-    }
+    if(props.singleOpen) activeItemId.value.clear();
+      activeItemId.value.add(id);
   }
 };
 

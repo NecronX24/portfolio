@@ -151,7 +151,7 @@ onBeforeUnmount(() => {
 
     <div class="division-div" id="about">
         <h1 class="about-me-h1">Who am I?</h1>
-        <Accordion>
+        <Accordion :single-open=true>
             <AccordionItem id="experience" title="Experience">
                 <div style="display: flex; flex-direction: row; justify-content: center; gap: 3%;">
                     <img src="/about/1.png" style="border-radius: 10%; width: 30vw; height: auto;"></img>

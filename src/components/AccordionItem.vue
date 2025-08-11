@@ -16,7 +16,7 @@ const activeItemId = inject('activeItemId');
 const toggleItem = inject('toggleItem');
 
 const isOpen = computed(() => {
-  return activeItemId.value === props.id;
+  return activeItemId.value.has(props.id);
 });
 </script>
 
