@@ -1,5 +1,4 @@
 import Home from "@/pages/Home.vue";
-import Session from "@/pages/Session.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
@@ -10,11 +9,6 @@ const router = createRouter({
         name: "home",
         component: Home
         },
-        {
-            path: "/session",
-            name: "session",
-            component: Session
-        }
 ]
 })
 
