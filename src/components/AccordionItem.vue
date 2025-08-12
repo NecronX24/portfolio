@@ -71,6 +71,7 @@ button{
   background-color: var(--surface-card);
   border-style: solid;
   border-color: gray;
+  color:white;
   width: 90vw;
   transition:
     border-color 0.3s ease,
@@ -164,13 +165,11 @@ button{
 :slotted(.h2) , h2{
   font-size: 1.5rem;
   opacity: 0.9;
-  color:white;
   margin:0
 }
 
 :slotted(.p, .span), span{
   font-size: 1.2rem;
-  color:white;
   margin: 0;
 }
 
@@ -181,6 +180,7 @@ button{
 }
 
 :slotted(.div){
+  color:white;
   display: flex;
   flex-direction: row;
   justify-content: center;
