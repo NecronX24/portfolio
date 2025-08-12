@@ -67,11 +67,12 @@ defineExpose({
 
 .home-button{
     cursor:pointer;
-    margin-left: 25px;
+    margin-left: 2%;
     font-weight: 900;
     font-family: 'PlayfairDisplay';
     color: #37ac62;
     transition: 0.3s;
+    font-size: 2.3rem;
 }
 
 .home-button:hover{
@@ -79,6 +80,7 @@ defineExpose({
 }
 
 .element-container{
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
 }
@@ -90,13 +92,15 @@ defineExpose({
     position: relative;
     padding-bottom: 5px;
     margin:9px;
+    font-size: 2rem;
 }
 .element:hover{
     color:#37ac62;
 }
 
 .button{
-    margin-right: 20px;
+    margin-top: 2vh;
+    margin-right: 2vw;
 }
 
 .element.selected{

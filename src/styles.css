@@ -9,4 +9,23 @@ body{
   padding:0;
   background: linear-gradient(to bottom, #08b51f82, #014522db),
               radial-gradient(circle, rgb(7, 78, 192), transparent);
+              
+}
+
+h1{
+  font-size: 3rem;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  color:white;
+}
+
+p, ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color:white;
 }
