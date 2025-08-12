@@ -51,8 +51,9 @@ function goToSlide(index) {
 
 <style scoped>
 .container {
-  max-width: 80vw;
+  width: 80vw;
   margin: 20px auto;
+  min-height: 100%;
 }
 
 .slideshow-container {
