@@ -153,14 +153,13 @@ onBeforeUnmount(() => {
         <h1 class="about-me-h1">Who am I?</h1>
         <Accordion :single-open=true>
             <AccordionItem id="experience" title="Experience">
-                <div style="display: flex; flex-direction: row; justify-content: center; gap: 3%;">
-                    <img src="/about/1.png" style="border-radius: 10%; width: 30vw; height: auto;"></img>
-                    <div >
-                        <h1 style="margin: 0; width: 30vw;">Store Manager - Barista</h1>
-                        <h2 style = "margin:0">Tres Puntos Cafe</h2>
-                        <p style="margin: 0;">2020 - 2022</p>
-                        <p style="font-weight: bolder; margin:0">Experience</p>
-                        <ul style="margin:3%; width: 30vw;">
+                <div class="div">
+                    <img class="img" src="/about/1.png"></img>
+                    <div class="text-div">
+                        <h1 class="h1">Store Manager - Barista</h1>
+                        <h2 class="h2">Tres Puntos Cafe <span class="p">(2020 - 2022)</span></h2>
+                        
+                        <ul class="ul">
                             <li>Operation of espresso machine and coffee preparation</li>
                             <li>Staff supervision, shift management, and inventory control</li>
                             <li>Customer service - Host</li>
@@ -169,19 +168,23 @@ onBeforeUnmount(() => {
                 </div>
             </AccordionItem>
             <AccordionItem id="education" title="Education">
-                <div style="display: flex; flex-direction: row; justify-content: center; gap: 3%;">
-                    <img src="/about/2.png" style="border-radius: 10%; width: 20vw; height: auto;"></img>
-                    <div>
-                        <h2 style="margin: 0; width: 50vw;">Bachelor's Degree in Computer Engineering</h2>
-                        <p style = "margin:0">Universidad Rafael Urdaneta</p>
-                        <p style="margin: 0;">2021 - Present</p>
-                        <p style="font-style: italic; margin:0">Honored four times on the Dean’s List and counting...</p>
-                        <h2 style="margin:0; width: 50vw; margin-top: 1%;">Barista Course</h2>
-                        <p style = "margin:0">Tercera Ola, EICV, Raul Martinez SCA Trainer</p>
-                        <p style="margin: 0;">2019, 2022, 2024</p>
-                        <h2 style="margin:0; width: 50vw; margin-top: 1%;">English Course</h2>
-                        <p style = "margin:0">CEVAZ</p>
-                        <p style="margin: 0;">2018 - 2020</p>
+                <div class="div">
+                    <img src="/about/2.png" class="img"></img>
+                    <div class="text-div">
+                        <div class="text-container">
+                            <h2 class="h2">Bachelor's Degree in Computer Engineering</h2>
+                            <p class="p">Universidad Rafael Urdaneta (2021 - Present)</p>
+                            <p class="p">Honored four times on the Dean’s List and counting...</p>
+                        </div>
+                        <div class="text-container">
+                            <h2 class="h2">Barista Course</h2>
+                            <p class="p">Tercera Ola (2019), EICV (2022), Raul Martinez SCA Trainer (2024)</p>
+                        </div>
+
+                        <div class="text-container">
+                            <h2 class="h2">English Course</h2>
+                            <p class="p">CEVAZ (2028 - 2020)</p>
+                        </div>
                     </div>
                 </div>
             </AccordionItem>

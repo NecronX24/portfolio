@@ -71,7 +71,7 @@ button{
   background-color: var(--surface-card);
   border-style: solid;
   border-color: gray;
-  min-width: 80vw;
+  width: 90vw;
   transition:
     border-color 0.3s ease,
     background-color 0.3s ease;
@@ -138,6 +138,7 @@ button{
   color: var(--text-color-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
+  max-height: 50vh;
 }
 
 .accordion-item.is-open {
@@ -155,22 +156,42 @@ button{
   color: var(--primary-color);
 }
 
-h1{
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: white;
+:slotted(.h1){
+  font-size: 2rem;
+  margin:0;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+:slotted(.h2) , h2{
+  font-size: 1.5rem;
   opacity: 0.9;
   color:white;
+  margin:0
 }
 
-p, span {
+:slotted(.p, .span), span{
   font-size: 1.2rem;
-  line-height: 1.6;
   color:white;
+  margin: 0;
+}
+
+:slotted(.img){
+  width: 30vw;
+  height: 50vh;
+  border-radius: 10%;
+}
+
+:slotted(.div){
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+}
+
+:slotted(.text-div){
+  width: 50vw;
+}
+
+:slotted(.text-container){
+  margin-bottom: 1.5%;
 }
 </style>
