@@ -51,6 +51,7 @@ import RadarChart from '@/components/RadarChart.vue';
 }
 
 h1{
-    margin:0
+    margin:0;
+    padding:0;
 }
 </style>

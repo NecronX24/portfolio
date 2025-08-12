@@ -106,9 +106,11 @@ onBeforeUnmount(() => {
     width: 50vw;
 }
 
-.about-me-h1{
+.division-title{
+    margin-top: 10vh;
+    margin-bottom: 1.5vh;
+    padding: 1vh;
     display: flex;
     justify-content: center;
-    padding: 3%;
 }
 </style>
