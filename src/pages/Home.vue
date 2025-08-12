@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar.vue';
 import Slider from '@/components/Slider.vue';
 import CardSlider from '@/components/CardSlider.vue';
 import { onMounted, onBeforeUnmount, ref } from 'vue';
-import RadarChart from '@/components/RadarChart.vue';
 import AccordionImplementation from './AccordionImplementation.vue';
+import ChartImplementation from './ChartImplementation.vue';
 
 let elements =[
     ["Home", "home"],
@@ -62,37 +62,10 @@ onBeforeUnmount(() => {
     </div>
     <div class="division-div" id="skills">
         <h1>Skills</h1>
-        <div style="display: flex; gap:5%">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <h1>Active Skills</h1>
-                <div class="chart">
-                    <RadarChart :data="[
-                        { name: 'HTML', value: 65 },
-                        { name: 'CSS', value: 50 },
-                        { name: 'JS', value: 75 },
-                        { name: 'Vue', value: 50 },
-                        { name: 'Angular', value: 50 },
-                        { name: 'React', value: 50 },
-                        { name: 'Design', value: 50 },
-                    ]"/>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <h1>Pasive Skills</h1>
-                <div class="chart">
-                    <RadarChart :data="[
-                        { name: 'Critical Thinking', value: 90 },
-                        { name: 'Flexibility', value: 100 },
-                        { name: 'Communication', value: 90 },
-                        { name: 'Grow Mindset', value: 89 },
-                        { name: 'Leadership', value: 80 },
-                    ]"/>
-                </div>
-            </div>
-        </div>
+        <ChartImplementation/>
     </div>
     
-    <div class="projects division-div" id="projects">
+    <div class="division-div" id="projects">
         <h1 class="about-me-h1"> Projects</h1>
         <Slider :total-slides="4">
             <template #slide-0 >
@@ -156,11 +129,11 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-#home{
+.home{
     height: 100vh;
     display: flex;
     flex-direction: row;
-    gap:20%
+    gap:5vw
 }
 
 #skills{
@@ -168,11 +141,6 @@ onBeforeUnmount(() => {
     align-items: center;
     flex-direction: column;
     height: 90vh;
-}
-
-.chart{
-    height: auto;
-    width: 35vw;
 }
 
 .image{
@@ -185,42 +153,18 @@ onBeforeUnmount(() => {
 }
 
 .division-div{
-    height: 90vh;
+    height: 100vh;
 }
 
 .home-text{
-    padding-top:30vh;
+    padding-top:20vh;
     padding-left:10vw;
-    width: 30%;
-}
-
-h1{
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  opacity: 0.9;
-  color:white;
-}
-
-p, ul {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color:white;
+    width: 50vw;
 }
 
 .about-me-h1{
     display: flex;
     justify-content: center;
     padding: 3%;
-}
-
-
-.projects{
-    height: 90vh;
 }
 </style>
