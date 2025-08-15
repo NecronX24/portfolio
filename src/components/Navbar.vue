@@ -7,9 +7,24 @@ defineProps({
         required:true
     }
 })
+
+const elementContainer = ref(null);
+
 const selected = ref(0);
 const selectItem = (index) =>{
     selected.value = index;
+    
+    const element = elementContainer.value.children[index];
+
+    const containerWidth = elementContainer.value.clientWidth;
+    const elementWidth = element.clientWidth;
+
+    const elementLeft = element.offsetLeft;
+    const scrollTo = elementLeft - (containerWidth/1.5) + (elementWidth/2);
+    
+    const maxScroll = elementContainer.value.scrollWidth - containerWidth;
+    
+    elementContainer.value.scrollTo({ left: Math.min(Math.max(scrollTo, 0), maxScroll), behavior: 'smooth' });
 }
 const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -34,7 +49,7 @@ defineExpose({
         >
             Angel C
         </h1>
-        <div class="element-container">
+        <div class="element-container" ref="elementContainer">
             <h1 class="element"
                 v-for="(element, index) in elements"
                 :key="index"
@@ -73,6 +88,7 @@ defineExpose({
     color: #37ac62;
     transition: 0.3s;
     font-size: 2.3rem;
+    width: 17vw;
 }
 
 .home-button:hover{
@@ -83,6 +99,15 @@ defineExpose({
     margin-top: 1vh;
     display: flex;
     flex-direction: row;
+    overflow-x: auto;
+
+    /*hidde overflow bar*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.element-container::-webkit-scrollbar{
+    display: none;
 }
 
 .element{
@@ -101,6 +126,8 @@ defineExpose({
 .button{
     margin-top: 1vh;
     margin-right: 2vw;
+    margin-left: 2vw;
+    width: 13vw;;
 }
 
 .element.selected{
