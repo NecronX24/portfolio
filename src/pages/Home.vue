@@ -31,7 +31,7 @@ onMounted(() => {
                         }
                     });
                 },
-                { threshold: 0.3 } 
+                { threshold: 0.6 } 
             );
             observer.observe(section);
             observers.push(observer);
