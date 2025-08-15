@@ -80,7 +80,7 @@ defineExpose({
 }
 
 .element-container{
-    margin-top: 1%;
+    margin-top: 1vh;
     display: flex;
     flex-direction: row;
 }
@@ -99,7 +99,7 @@ defineExpose({
 }
 
 .button{
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-right: 2vw;
 }
 
