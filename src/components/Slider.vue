@@ -58,9 +58,8 @@ function goToSlide(index) {
 
 .slideshow-container {
   position: relative;
-  background: #055610db;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.457);
   color: #fff;
   height: 60vh;
@@ -95,21 +94,20 @@ function goToSlide(index) {
   color: #fff;
   font-weight: bold;
   font-size: 30px;
-  background: rgba(0,0,0,0.4);
   cursor: pointer;
   border-radius: 50%;
   user-select: none;
   z-index: 10;
 }
 .prev:hover, .next:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.2);
 }
 
 .prev {
-  left: 15px;
+  left: -3vw;
 }
 .next {
-  right: 15px;
+  right: -3vw;
 }
 
 .dots-container {

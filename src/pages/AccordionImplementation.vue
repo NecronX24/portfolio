@@ -27,7 +27,7 @@ import AccordionItem from '@/components/AccordionItem.vue';
                         <div class="text-container">
                             <h2 class="h2">Bachelor's Degree in Computer Engineering</h2>
                             <p class="p">Universidad Rafael Urdaneta (2021 - Present)</p>
-                            <p class="p">Honored four times on the Dean’s List and counting...</p>
+                            <p class="p" style="font-style: italic;">Honored four times on the Dean’s List and counting...</p>
                         </div>
                         <div class="text-container">
                             <h2 class="h2">Barista Course</h2>
