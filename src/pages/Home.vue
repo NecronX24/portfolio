@@ -5,6 +5,9 @@ import { onMounted, onBeforeUnmount, ref } from 'vue';
 import AccordionImplementation from './AccordionImplementation.vue';
 import ChartImplementation from './ChartImplementation.vue';
 import SliderImplementation from './SliderImplementation.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 let elements =[
     ["Home", "home"],
@@ -51,7 +54,7 @@ onBeforeUnmount(() => {
             <h1 class="home-h1">Hello!, I'm Angel Cueche</h1>
             <h2 class="home-h2">Junior Developer</h2>
             <p class="home-p">
-                Computer Engineering Student
+                Computer Engineering Student {{$t('message.test')}}
             </p>
             <p class="home-p"> A passionate person who is looking for real experience in the programming world!</p>
         </div>
