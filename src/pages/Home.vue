@@ -10,10 +10,10 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 let elements =[
-    ["Home", "home"],
-    ["Skills", "skills"],
-    ["Projects", "projects"],
-    ["About", "about"]
+    [t('message.titles.home'), "home"],
+    [t('message.titles.skills'), "skills"],
+    [t('message.titles.projects'), "projects"],
+    [t('message.titles.about'), "about"]
 ]
 
 const navbarRef = ref(null);
@@ -48,32 +48,32 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <Navbar :elements="elements" ref="navbarRef"></Navbar>
+    <Navbar :elements="elements" :button-text="t('message.titles.button')" ref="navbarRef"></Navbar>
     <div class="home" id="home">
         <div class="home-text">
-            <h1 class="home-h1">Hello!, I'm Angel Cueche</h1>
-            <h2 class="home-h2">Junior Developer</h2>
+            <h1 class="home-h1">{{ t('message.home.title') }}</h1>
+            <h2 class="home-h2">{{ t('message.home.subtitle') }}</h2>
             <p class="home-p">
-                Computer Engineering Student {{$t('message.test')}}
+                {{ t('message.home.firstP') }}
             </p>
-            <p class="home-p"> A passionate person who is looking for real experience in the programming world!</p>
+            <p class="home-p">{{ t('message.home.secondP') }}</p>
         </div>
         <div class="image">
             <img src="/me.png" style="height: 100%; width: 100%; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); border-radius: 50%;"/>
         </div>
     </div>
     <div class="division-div" id="skills">
-        <h1 class="division-title">Skills</h1>
+        <h1 class="division-title">{{ t('message.titles.skills') }}</h1>
         <ChartImplementation/>
     </div>
     
     <div class="division-div" id="projects">
-        <h1 class="division-title"> Projects</h1>
+        <h1 class="division-title"> {{ t('message.titles.projects') }}</h1>
         <SliderImplementation/>
     </div>
 
     <div class="division-div" id="about">
-        <h1 class="division-title">Who am I?</h1>
+        <h1 class="division-title">{{ t('message.titles.whoami') }}</h1>
         <AccordionImplementation/>
     </div>
 

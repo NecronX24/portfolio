@@ -7,9 +7,9 @@ import CardSlider from '@/components/CardSlider.vue';
     <Slider :total-slides="4">
             <template #slide-0 >
                 <CardSlider
-                name="React"
+                :name="$t('message.slider.react.title')"
                 image="/react.png"
-                content="A project for creating and managing notes, which includes the implementation of a personal server to securely and personally handle user sessions."
+                :content="$t('message.slider.react.content')"
                 github="https://github.com/NecronX24/note-project-react"
                 vercel="https://note-project-react.vercel.app/"
                 :slides="{
@@ -21,9 +21,9 @@ import CardSlider from '@/components/CardSlider.vue';
             </template>
             <template #slide-1>
                 <CardSlider
-                name="Angular"
+                :name="$t('message.slider.angular.title')"
                 image="/angular.png"
-                content="A project with ten clocks built as Angular components, including a personal server for secure session handling."
+                :content="$t('message.slider.angular.content')"
                 github="https://github.com/NecronX24/clocks-angular"
                 vercel="https://clocks-angular.vercel.app/clocks"
                 :slides="{
@@ -35,9 +35,9 @@ import CardSlider from '@/components/CardSlider.vue';
             </template>
             <template #slide-2>
                 <CardSlider
-                name="Vue"
+                :name="$t('message.slider.vue.title')"
                 image="/vue.png"
-                content="A portfolio built with Vue, showcasing component-based design and modern UI practices."
+                :content="$t('message.slider.vue.content')"
                 github="https://github.com/NecronX24/portfolio"
                 vercel="https://necronx24-portfolio.vercel.app/"
                 :slides="{
@@ -46,13 +46,13 @@ import CardSlider from '@/components/CardSlider.vue';
                 />
             </template>
             <template #slide-3>
-                <h1>Other projects</h1>
+                <h1>{{ $t('message.slider.other.title') }}</h1>
                 <div style="display: flex; flex-direction:row; gap:2%; align-items: center; justify-content: center;">
-                    <p >A backend project made in</p> <img src="/node.png" style="width: 10%;"/>
+                    <p >{{ $t('message.slider.other.backend') }}</p> <img src="/node.png" style="width: 10%;"/>
                 </div>
                 <div style="display: flex; flex-direction:row; gap:2%; align-items: center; justify-content: center;">
-                    <p >Basic projects made in</p> <img src="/c++.png" style="width: 5%;"/>
-                    <p> and </p> <img src="/java.png" style="width: 5%;"/>
+                    <p >{{ $t('message.slider.other.projects') }}</p> <img src="/c++.png" style="width: 5%;"/>
+                    <p> {{ $t('message.slider.other.and') }} </p> <img src="/java.png" style="width: 5%;"/>
                 </div>
             </template>
         </Slider>

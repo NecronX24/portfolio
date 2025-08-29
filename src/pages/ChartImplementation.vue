@@ -5,7 +5,7 @@ import RadarChart from '@/components/RadarChart.vue';
 <template>
 <div class="container">
             <div class="chart-container">
-                <h1>Active Skills</h1>
+                <h1>{{ $t('message.chart.active') }}</h1>
                 <div class="chart">
                     <RadarChart :data="[
                         { name: 'HTML', value: 65 },
@@ -14,19 +14,19 @@ import RadarChart from '@/components/RadarChart.vue';
                         { name: 'Vue', value: 50 },
                         { name: 'Angular', value: 50 },
                         { name: 'React', value: 50 },
-                        { name: 'Design', value: 50 },
+                        { name: $t('message.chart.activeRadar.design') , value: 50 },
                     ]"/>
                 </div>
             </div>
             <div class="chart-container">
-                <h1>Pasive Skills</h1>
+                <h1>{{$t('message.chart.passive')}}</h1>
                 <div class="chart">
                     <RadarChart :data="[
-                        { name: 'Critical Thinking', value: 90 },
-                        { name: 'Flexibility', value: 100 },
-                        { name: 'Communication', value: 90 },
-                        { name: 'Grow Mindset', value: 89 },
-                        { name: 'Leadership', value: 80 },
+                        { name: $t('message.chart.passiveRadar.first'), value: 90 },
+                        { name: $t('message.chart.passiveRadar.second'), value: 100 },
+                        { name: $t('message.chart.passiveRadar.third'), value: 90 },
+                        { name: $t('message.chart.passiveRadar.fourth'), value: 89 },
+                        { name: $t('message.chart.passiveRadar.fifth'), value: 80 },
                     ]"/>
                 </div>
             </div>

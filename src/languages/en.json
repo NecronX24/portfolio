@@ -1,5 +1,55 @@
 {
     "message": {
-        "test":"test"
+        "home": {
+            "title": "Hello!, I'm Angel Cueche",
+            "subtitle": "Junior Developer",
+            "firstP":"Computer Engineering Student",
+            "secondP": "A passionate person who is looking for real experience in the programming world!"
+        },
+        "titles": {
+            "home": "Home",
+            "skills": "Skills",
+            "projects": "Projects",
+            "about": "About",
+            "whoami": "Who am I?",
+            "button": "Contact me!"
+        },
+        "chart": {
+            "active": "Active Skills",
+            "activeRadar": {
+                "design": "Design"
+            },
+            "passive": "Passive Skills",
+            "passiveRadar": {
+                "first": "Critical Thinking",
+                "second": "Flexibility",
+                "third": "Communication",
+                "fourth": "Grow Mindset",
+                "fifth": "Leadership"
+            }
+        },
+        "slider": {
+            "react": {
+                "title": "React",
+                "content": "A project for creating and managing notes, which includes the implementation of a personal server to securely and personally handle user sessions."
+            },
+            "angular": {
+                "title": "Angular",
+                "content": "A project with ten clocks built as Angular components, including a personal server for secure session handling."
+            },
+            "vue": {
+                "title": "Vue",
+                "content": "A portfolio built with Vue, showcasing component-based design and modern UI practices."
+            },
+            "other": {
+                "title": "Other projects",
+                "backend": "A backend project made in",
+                "projects": "Basic projects made in",
+                "and": "and"
+            }
+        },
+        "accordion": {
+            
+        }
     }
 }
