@@ -5,6 +5,10 @@ defineProps({
     elements:{
         type:Array,
         required:true
+    },
+    buttonText:{
+        type:String,
+        required:true
     }
 })
 
@@ -58,7 +62,7 @@ defineExpose({
             >
                 {{ element[0] }}</h1>
         </div>
-        <Button text="Contact me" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
+        <Button :text="buttonText" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
     </div>
 </template>
 
