@@ -49,7 +49,47 @@
             }
         },
         "accordion": {
-            
+            "experience":{
+                "title": "Experience",
+                "workstation": "Store Manager - Barista",
+                "place": "Tres Puntos Cafe ",
+                "time": " (2020 - 2022)",
+                "first": "Operation of espresso machine and coffee preparation",
+                "second": "Staff supervision, shift management, and inventory control",
+                "third": "Customer service - Waiter"
+            },
+            "education": {
+                "title": "Education",
+                "college":{
+                    "title": "Bachelor's Degree in Computer Engineering",
+                    "place": "Universidad Rafael Urdaneta (2021 - Present)",
+                    "comment": "Honored four times on the Dean’s List and counting..."
+                },
+                "barista":{
+                    "title":"Barista Course",
+                    "place": "Tercera Ola (2019), EICV (2022), Raul Martinez SCA Trainer (2024)"
+                },
+                "english":{
+                    "title": "English Course",
+                    "place": "CEVAZ (2018 - 2020)"
+                }
+            },
+            "personal":{
+                "title": "Personal Information",
+                "mail": "Mail: angeljavicueche@gmail.com",
+                "location": "Location: Maracaibo, Zulia",
+                "phone": "Phone: +58 412 6244 554",
+                "english": "English Level: B2"
+            },
+            "hobbies":{
+                "title": "Hobbies",
+                "first": "Programming",
+                "second": "Barista skills",
+                "third": "Personal growth",
+                "fourth": "Video games",
+                "fifth": "Reading",
+                "sixth": "Gardening"
+            }
         }
     }
 }

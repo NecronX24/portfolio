@@ -5,58 +5,58 @@ import AccordionItem from '@/components/AccordionItem.vue';
 
 <template>
 <Accordion :single-open=true>
-            <AccordionItem id="experience" title="Experience">
+            <AccordionItem id="experience" :title="$t('message.accordion.experience.title')">
                 <div class="div">
                     <img class="img" src="/about/1.png"></img>
                     <div class="text-div">
-                        <h1 class="h1">Store Manager - Barista</h1>
-                        <h2 class="h2">Tres Puntos Cafe <span class="p">(2020 - 2022)</span></h2>
+                        <h1 class="h1">{{ $t('message.accordion.experience.workstation') }}</h1>
+                        <h2 class="h2">{{ $t('message.accordion.experience.place') }}<span class="p">{{ $t('message.accordion.experience.time') }}</span></h2>
                         
                         <ul class="ul">
-                            <li>Operation of espresso machine and coffee preparation</li>
-                            <li>Staff supervision, shift management, and inventory control</li>
-                            <li>Customer service - Host</li>
+                            <li>{{ $t('message.accordion.experience.first') }}</li>
+                            <li>{{ $t('message.accordion.experience.second') }}</li>
+                            <li>{{ $t('message.accordion.experience.third') }}</li>
                         </ul>
                     </div>
                 </div>
             </AccordionItem>
-            <AccordionItem id="education" title="Education">
+            <AccordionItem id="education" :title="$t('message.accordion.education.title')">
                 <div class="div">
                     <img src="/about/2.png" class="img"></img>
                     <div class="text-div">
                         <div class="text-container">
-                            <h2 class="h2">Bachelor's Degree in Computer Engineering</h2>
-                            <p class="p">Universidad Rafael Urdaneta (2021 - Present)</p>
-                            <p class="p" style="font-style: italic;">Honored four times on the Dean’s List and counting...</p>
+                            <h2 class="h2">{{ $t('message.accordion.education.college.title') }}</h2>
+                            <p class="p">{{ $t('message.accordion.education.college.place') }}</p>
+                            <p class="p" style="font-style: italic;">{{ $t('message.accordion.education.college.comment') }}</p>
                         </div>
                         <div class="text-container">
-                            <h2 class="h2">Barista Course</h2>
-                            <p class="p">Tercera Ola (2019), EICV (2022), Raul Martinez SCA Trainer (2024)</p>
+                            <h2 class="h2">{{ $t('message.accordion.education.barista.title') }}</h2>
+                            <p class="p">{{ $t('message.accordion.education.barista.place') }}</p>
                         </div>
 
                         <div class="text-container">
-                            <h2 class="h2">English Course</h2>
-                            <p class="p">CEVAZ (2028 - 2020)</p>
+                            <h2 class="h2">{{ $t('message.accordion.education.english.title') }}</h2>
+                            <p class="p">{{ $t('message.accordion.education.english.place') }}</p>
                         </div>
                     </div>
                 </div>
             </AccordionItem>
-            <AccordionItem id="personal-information" title="Personal Information">
+            <AccordionItem id="personal-information" :title="$t('message.accordion.personal.title')">
                 <ul>
-                    <li>Mail: angeljavicueche@gmail.com</li>
-                    <li>Phone: +58-412-6244-554</li>
-                    <li>Location: Maracaibo, Venezuela</li>
-                    <li>English Level: B2</li>
+                    <li>{{ $t('message.accordion.personal.mail') }}</li>
+                    <li>{{ $t('message.accordion.personal.phone') }}</li>
+                    <li>{{ $t('message.accordion.personal.location') }}</li>
+                    <li>{{ $t('message.accordion.personal.english') }}</li>
                 </ul>
             </AccordionItem>
-            <AccordionItem id="hobbies" title="Hobbies">
+            <AccordionItem id="hobbies" :title="$t('message.accordion.hobbies.title')">
                 <ul>
-                    <li>Programming</li>
-                    <li>Barista skills</li>
-                    <li>Personal growth</li>
-                    <li>Video games</li>
-                    <li>Reading</li>
-                    <li>Gardening</li>
+                    <li>{{ $t('message.accordion.hobbies.first') }}</li>
+                    <li>{{ $t('message.accordion.hobbies.second') }}</li>
+                    <li>{{ $t('message.accordion.hobbies.third') }}</li>
+                    <li>{{ $t('message.accordion.hobbies.fourth') }}</li>
+                    <li>{{ $t('message.accordion.hobbies.fifth') }}</li>
+                    <li>{{ $t('message.accordion.hobbies.sixth') }}</li>
                 </ul>
             </AccordionItem>
         </Accordion>
