@@ -10,7 +10,7 @@
             "home": "Home",
             "skills": "Skills",
             "projects": "Projects",
-            "about": "About",
+            "about": "About me",
             "whoami": "Who am I?",
             "button": "Contact me!"
         },
@@ -61,7 +61,7 @@
             "education": {
                 "title": "Education",
                 "college":{
-                    "title": "Bachelor's Degree in Computer Engineering",
+                    "title": "Computer Engineering",
                     "place": "Universidad Rafael Urdaneta (2021 - Present)",
                     "comment": "Honored four times on the Dean’s List and counting..."
                 },

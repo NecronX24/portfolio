@@ -1,0 +1,95 @@
+{
+    "message": {
+        "home": {
+            "title": "¡Hola!, Soy Angel Cueche",
+            "subtitle": "Desarrollador Junior",
+            "firstP": "Estudiante de Ingeniería en Computación",
+            "secondP": "Una persona apasionada que busca experiencia real en el mundo de la programación"
+        },
+        "titles": {
+            "home": "Inicio",
+            "skills": "Habilidades",
+            "projects": "Proyectos",
+            "about": "Acerca de mí",
+            "whoami": "¿Quién soy?",
+            "button": "¡Contáctame!"
+        },
+        "chart": {
+            "active": "Habilidades Activas",
+            "activeRadar": {
+                "design": "Diseño"
+            },
+            "passive": "Habilidades Pasivas",
+            "passiveRadar": {
+                "first": "Pensamiento Crítico",
+                "second": "Flexibilidad",
+                "third": "Comunicación",
+                "fourth": "Mentalidad de Crecimiento",
+                "fifth": "Liderazgo"
+            }
+        },
+        "slider": {
+            "react": {
+                "title": "React",
+                "content": "Un proyecto para crear y gestionar notas, que incluye la implementación de un servidor personal para manejar las sesiones de usuario de manera segura y personal."
+            },
+            "angular": {
+                "title": "Angular",
+                "content": "Un proyecto con diez relojes construidos como componentes de Angular, incluyendo un servidor personal para gestionar sesiones de manera segura."
+            },
+            "vue": {
+                "title": "Vue",
+                "content": "Un portafolio construido con Vue, que muestra diseño basado en componentes y prácticas modernas de UI."
+            },
+            "other": {
+                "title": "Otros proyectos",
+                "backend": "Un proyecto backend hecho en",
+                "projects": "Proyectos básicos hechos en",
+                "and": "y"
+            }
+        },
+        "accordion": {
+            "experience": {
+                "title": "Experiencia",
+                "workstation": "Gerente de tienda - Barista",
+                "place": "Tres Puntos Cafe",
+                "time": " (2020 - 2022)",
+                "first": "Operación de máquina de espresso y preparación de café",
+                "second": "Supervisión del personal, gestión de turnos y control de inventario",
+                "third": "Atención al cliente - Mesero"
+            },
+            "education": {
+                "title": "Educación",
+                "college": {
+                    "title": "Ingeniería en Computación",
+                    "place": "Universidad Rafael Urdaneta (2021 - Presente)",
+                    "comment": "Cuatro veces en cuadro de Honored y contando..."
+                },
+                "barista": {
+                    "title": "Curso de Barista",
+                    "place": "Tercera Ola (2019), EICV (2022), Instructor SCA Raul Martinez (2024)"
+                },
+                "english": {
+                    "title": "Curso de Inglés",
+                    "place": "CEVAZ (2018 - 2020)"
+                }
+            },
+            "personal": {
+                "title": "Información Personal",
+                "mail": "Correo: angeljavicueche@gmail.com",
+                "location": "Ubicación: Maracaibo, Zulia",
+                "phone": "Teléfono: +58 412 6244 554",
+                "english": "Nivel de Inglés: B2"
+            },
+            "hobbies": {
+                "title": "Pasatiempos",
+                "first": "Programación",
+                "second": "Habilidades de Barista",
+                "third": "Crecimiento personal",
+                "fourth": "Videojuegos",
+                "fifth": "Lectura",
+                "sixth": "Jardinería"
+            }
+        }
+    }
+}
