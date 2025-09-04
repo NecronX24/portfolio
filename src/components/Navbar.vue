@@ -1,6 +1,8 @@
 <script setup>
 import Button from './Button.vue';
 import { ref } from 'vue';
+import DropdownMenu from './DropdownMenu.vue';
+import { useI18n } from 'vue-i18n';
 defineProps({
     elements:{
         type:Array,
@@ -41,6 +43,17 @@ defineExpose({
     selectItem,
     selected
 })
+
+const i18n = useI18n();
+
+const selectLanguage = (language) =>{
+    i18n.locale.value = language.code
+}
+
+const languages = [
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' }
+]
 </script>
 
 <template>
@@ -62,7 +75,10 @@ defineExpose({
             >
                 {{ element[0] }}</h1>
         </div>
-        <Button :text="buttonText" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
+        <div class="right-buttons">
+            <Button :text="buttonText" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
+            <DropdownMenu :elements="languages" :funct="selectLanguage"/>
+        </div>
     </div>
 </template>
 
@@ -129,9 +145,19 @@ defineExpose({
 
 .button{
     margin-top: 1vh;
-    margin-right: 2vw;
-    margin-left: 2vw;
-    width: 13vw;;
+    margin-left: 1.5vw;
+    width: 11dvw;;
+}
+
+.right-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    margin-right: 1vw;
+}
+
+.dropdown{
+    margin-top:2vh;
 }
 
 .element.selected{
