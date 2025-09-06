@@ -3,6 +3,7 @@ import Button from './Button.vue';
 import { ref } from 'vue';
 import DropdownMenu from './DropdownMenu.vue';
 import { useI18n } from 'vue-i18n';
+import MailForm from './MailForm.vue';
 
 defineProps({
     elements:{
@@ -55,6 +56,10 @@ const languages = [
     { code: 'en', label: 'English' },
     { code: 'es', label: 'Español' }
 ]
+
+const formEvent = ref(null)
+
+const toggleForm = () => {formEvent.value?.toggleMailForm()}
 </script>
 
 <template>
@@ -77,10 +82,11 @@ const languages = [
                 {{ element[0] }}</h1>
         </div>
         <div class="right-buttons">
-            <Button :text="buttonText" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
+            <Button :text="buttonText" :event="toggleForm" :colors="{backgroundColor:'#37ac62', textColor:'white', activeColor:'#206d3d'}"/>
             <DropdownMenu :elements="languages" :funct="selectLanguage"/>
         </div>
     </div>
+    <MailForm ref="formEvent"></MailForm>
 </template>
 
 <style scoped>
