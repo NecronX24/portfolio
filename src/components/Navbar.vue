@@ -3,6 +3,7 @@ import Button from './Button.vue';
 import { ref } from 'vue';
 import DropdownMenu from './DropdownMenu.vue';
 import { useI18n } from 'vue-i18n';
+
 defineProps({
     elements:{
         type:Array,
