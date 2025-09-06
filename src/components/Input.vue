@@ -13,6 +13,14 @@ const props = defineProps({
     type: {
         type: String,
         default: 'text'
+    },
+    name: {
+        type:String,
+        required: true
+    },
+    textArea:{
+        type: Boolean,
+        default:false
     }
 });
 
@@ -26,9 +34,19 @@ let inputText = ref('');
             {{ spanText }}
         </span>
         <input 
+            v-if="!textArea"
             class="input" 
             :style="{ boxShadow: `0 0 8px #${hexColors}` }"
             :type="type"
+            :name="name"
+            v-model="inputText"
+        />
+        <textarea 
+            v-if="textArea"
+            class="input" 
+            :style="{ boxShadow: `0 0 8px #${hexColors}` }"
+            :type="type"
+            :name="name"
             v-model="inputText"
         />
     </div>
