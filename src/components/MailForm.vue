@@ -13,6 +13,7 @@ const sendMail = async () =>{
     try {
         await emailjs.sendForm('necronx24mail', 'necronx24template', form.value, {publicKey: '18y-cOXw3LizMOTRy'});
         console.log('Email enviado correctamente');
+        showMailForm.value = false;
     } catch (error) {
         console.log('Error en envio de mail' + error);
     }
@@ -42,6 +43,9 @@ defineExpose({toggleMailForm})
 
 <style scoped>
 .mail-form{
-    display: block;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.756);
+    width: 100%;
+    height: 100%;
 }
 </style>
