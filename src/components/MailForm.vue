@@ -29,23 +29,25 @@ defineExpose({toggleMailForm})
 </script>
 
 <template>
-    <div class="mail-form" v-show="showMailForm">
-        <InputCard>
-            <form ref="form" @submit.prevent="sendMail">
-                <Input span-text="Your Name" name="name"/>
-                <Input span-text="Your Email" name="mail" type="email"/>
-                <Input span-text="Message" name="message" :text-area=true />
-                <input type="submit" value="Send" />
-            </form>
-        </InputCard>
+    <InputCard v-show="showMailForm">
+        <h1>{{ $t('message.mailForm.title') }}</h1>
+        <form ref="form" @submit.prevent="sendMail">
+            <Input :span-text="$t('message.mailForm.name')" name="name" hex-colors="ffffff90"/>
+            <Input :span-text="$t('message.mailForm.mail')" name="mail" type="email" hex-colors="ffffff90"/>
+            <Input :span-text="$t('message.mailForm.message')" name="message" :text-area=true hex-colors="ffffff90"/>
+            <input type="submit" value="Send" />
+        </form>
+    </InputCard>
+    <div class="mail-form" v-show="showMailForm" @click="toggleMailForm">
     </div>
 </template>
 
 <style scoped>
 .mail-form{
-    z-index: 11;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.756);
     width: 100%;
     height: 100%;
+    position: fixed;        
 }
 </style>
