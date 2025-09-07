@@ -97,7 +97,7 @@ function goToSlide(index) {
   cursor: pointer;
   border-radius: 50%;
   user-select: none;
-  z-index: 10;
+  z-index: 1;
 }
 .prev:hover, .next:hover {
   background: rgba(255,255,255,0.2);
