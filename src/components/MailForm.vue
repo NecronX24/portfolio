@@ -2,7 +2,7 @@
 import InputCard from './InputCard.vue';
 import Input from './Input.vue';
 import emailjs from '@emailjs/browser'
-import { ref, defineExpose } from 'vue';
+import { ref } from 'vue';
 
 let form = ref(null);
 
