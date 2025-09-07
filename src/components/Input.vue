@@ -83,5 +83,10 @@ let inputText = ref('');
         border-radius: 6px;
         height: 40px;
         font-size: 1em;
+        width: 100%;
+    }
+
+    textarea{
+        resize: none;
     }
 </style>
