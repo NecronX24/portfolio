@@ -90,6 +90,13 @@
                 "fifth": "Lectura",
                 "sixth": "Jardinería"
             }
+        },
+        "mailForm": {
+            "title": "¡Envíame un mensaje!",
+            "name": "Tu nombre",
+            "mail": "Tu correo",
+            "message": "Mensaje",
+            "button": "Enviar"
         }
     }
 }
