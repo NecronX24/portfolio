@@ -15,7 +15,7 @@
         top: 50%;             
         left: 50%;            
         transform: translate(-50%, -50%); 
-        background-color: white;
+        background: linear-gradient(to bottom, #204836, #15472d);
         padding: 20px;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         border-radius: 8px;
