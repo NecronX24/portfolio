@@ -36,7 +36,7 @@ let inputText = ref('');
         <input 
             v-if="!textArea"
             class="input" 
-            :style="{ boxShadow: `0 0 8px #${hexColors}` }"
+            :style="{ boxShadow: `0 0 8px #${hexColors}`, borderColor:`#${hexColors}` }"
             :type="type"
             :name="name"
             v-model="inputText"
@@ -44,7 +44,7 @@ let inputText = ref('');
         <textarea 
             v-if="textArea"
             class="input" 
-            :style="{ boxShadow: `0 0 8px #${hexColors}` }"
+            :style="{ boxShadow: `0 0 8px #${hexColors}`, borderColor:`#${hexColors}` }"
             :type="type"
             :name="name"
             v-model="inputText"
@@ -74,6 +74,7 @@ let inputText = ref('');
         margin-top: -30px;
         opacity: 1;
         font-size: 1.15em;
+        color:white
     }
 
     .input {
